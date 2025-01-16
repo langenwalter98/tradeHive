@@ -2,17 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=320, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Alexander Langenwalter, Claire Philippides, Jade Hall & Tracy Cantabrana">
     <title>TRADE HIVE</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- jquery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- font awesome CDN-->
     <!-- typeface import -->
 </head>
-<body>
+<body class="min-h-screen">
+    <!-- header section -->
+    <header class="p-4 flex items-center gap-4 bg-teal-700 text-white">
+        <!-- logo container -->
+        <div class="w-12 h-12">
+            <img src="/api/placeholder/48/48" alt="LOGO HERE" class="w-full h-full object-cover rounded-lg"/>
+        </div>
+        <!-- search bar container -->
+        <div class="flex-1 relative flex items-center">
+            <input type="search" 
+                placeholder="Search here..." 
+                class="search-input"/>
+            <button class="filter-button">
+                <svg class="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+            </button>
+        </div> 
+        <!-- new listing button -->
+        <button class="new-listing-button">New Listing</button>
+    </header>
 
+     <!-- recommended section -->
+     <section class="recommended-section">
+        <h2 class="text-xl font-bold mb-4">Recommended For You</h2>
+        <div class="scroll-container">
+            <!-- recommended card 01 -->
+            <div class="recommendation-card">
+                <div class="relative">
+                    <img src="/images/lavaLamp.jpg" class="card-image"/>
+                    <div class="user-badge">
+                        <!-- <img src="/api/placeholder/24/24" alt="User" class="w-6 h-6 rounded-full"/> -->
+                        <span class="text-sm">Jenny Joe</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="font-medium">Lava Lamp</h3>
+                    <div class="card-actions">
+                        <button class="action-button">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </button>
+                        <button class="action-button">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- ADDITIONAL CARDS TO BE ADDED HERE -->
+             <!-- recommended card 02 -->
+            <div class="recommendation-card">
+                <div class="relative">
+                    <img src="/images/campFood.jpg" class="card-image"/>
+                    <div class="user-badge">
+                        <!-- <img src="/api/placeholder/24/24" alt="User" class="w-6 h-6 rounded-full"/> -->
+                        <span class="text-sm">Jack Jones</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="font-medium">Camping Cooking Lesson</h3>
+                    <div class="card-actions">
+                        <button class="action-button">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </button>
+                        <button class="action-button">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
 
