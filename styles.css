@@ -69,7 +69,9 @@ header {
     width: 12rem;
     border-radius: 0.5rem;
     overflow: hidden;
-    background: #ffffff;
+    background-color: #97B1A5;
+    /* background-color: #286765; */
+    /* background: #ffffff; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -152,6 +154,53 @@ header {
     height: 100%;
     object-fit: cover;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* recently viewed section */
+.recently-viewed-section {
+    margin-top: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.recently-viewed-section .text-xl {
+    padding-top: 15px;
+}
+
+.recently-viewed-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.recently-viewed-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #97B1A5;
+    position: relative;
+}
+
+.recently-viewed-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.recently-viewed-user {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 9999px;
+    padding: 2px;
+}
+
+.recently-viewed-content {
+    padding: 0.75rem;
+}
+
+.recently-viewed-content .action-button {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* COMMENT COPY */
