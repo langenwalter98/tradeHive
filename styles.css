@@ -110,7 +110,48 @@ header {
 }
 
 .action-button {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* traders section */
+.traders-section {
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.traders-section .text-xl {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.traders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* trader cards */
+.trader-card {
+    text-align: center;
+}
+
+.hexagon-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.hexagon-wrapper {
+    position: absolute;
+    inset: 0;
+}
+
+.hexagon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 /* COMMENT COPY */
