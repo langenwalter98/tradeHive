@@ -203,4 +203,42 @@ header {
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* fixed navigation bar */
+.fixed-nav {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #286765;
+    border-radius: 9999px;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.nav-item:hover {
+    opacity: 0.8;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    /* background-color: rgb(249, 115, 22);
+    border-radius: 9999px;
+    border: 2px solid rgb(13 148 136);  */
+}
+
 /* COMMENT COPY */
