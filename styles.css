@@ -52,11 +52,13 @@ header {
 }
 
 .recommended-section .text-xl {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-family: "Baloo 2", serif;
     font-size: 24px;
 }
 
-.scroll-container {
+.recommended-section .scroll-container {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
@@ -66,17 +68,27 @@ header {
     -ms-overflow-style: none; /* IE and edge */
 }
 
-.scroll-container::-webkit-scrollbar {
+.recommended-section .scroll-container::-webkit-scrollbar {
     display: none; /* chrome, safari, opera */
 }
 
 /* recommendation cards */
+.recommendation-card:nth-child(odd) {
+    background: #97B1A5;
+    border: 1px solid rgba(135, 159, 148, 0.05);
+}
+
+.recommendation-card:nth-child(even) {
+    background: #286765;
+    border: 1px solid rgba(36, 92, 90, 0.05);
+}
+
 .recommendation-card {
     flex-shrink: 0;
     width: 12rem;
     border-radius: 0.5rem;
     overflow: hidden;
-    background-color: #97B1A5;
+    /* background-color: #97B1A5; */
     /* background-color: #286765; */
     /* background: #ffffff; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -111,13 +123,13 @@ header {
     pointer-events: none;
 } */
 
-.card-image {
+.recommendation-card .card-image {
     width: 100%;
     height: 12rem;
     object-fit: cover;
 }
 
-.user-badge {
+.recommendation-card .user-badge {
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
@@ -126,17 +138,17 @@ header {
     gap: 0.5rem;
 }
 
-.card-content {
+.recommendation-card .card-content {
     padding: 0.75rem;
 }
 
-.card-actions {
+.recommendation-card .card-actions {
     display: flex;
     justify-content: space-between;
     margin-top: 0.5rem;
 }
 
-.action-button {
+.recommendation-card .action-button {
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -194,8 +206,104 @@ header {
     z-index: 1;
 }
 
-/* recently viewed section */
+/* UPDATED recently viewed section */
 .recently-viewed-section {
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+}
+
+.recently-viewed-section .text-xl {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: "Baloo 2", serif;
+    font-size: 24px;
+}
+
+.recently-viewed-section .scroll-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    /* hide scrollbar but keep functionality */
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE and edge */
+}
+
+.recently-viewed-section .scroll-container::-webkit-scrollbar {
+    display: none; /* chrome, safari, opera */
+}
+
+/* UPDATED recently viewed cards */
+.recently-viewed-card:nth-child(odd) {
+    background: #97B1A5;
+    border: 1px solid rgba(135, 159, 148, 0.05);
+}
+
+.recently-viewed-card:nth-child(even) {
+    background: #286765;
+    border: 1px solid rgba(36, 92, 90, 0.05);
+}
+
+.recently-viewed-card {
+    flex-shrink: 0;
+    width: 12rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    /* background-color: #97B1A5; */
+    /* background-color: #286765; */
+    /* background: #ffffff; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recently-viewed-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.recently-viewed-card .text-sm {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 2px 2px rgb(32, 32, 32);
+}
+
+.recently-viewed-card .text-xs {
+    text-shadow: 2px 2px rgb(32, 32, 32); 
+}
+
+.recently-viewed-card .card-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.recently-viewed-card .user-badge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.recently-viewed-card .card-content {
+    padding: 0.75rem;
+}
+
+.recently-viewed-card .card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.recently-viewed-card .action-button {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* recently viewed section */
+/* .recently-viewed-section {
     margin-top: 2rem;
     padding: 0 1rem;
     margin-bottom: 2rem;
@@ -240,7 +348,7 @@ header {
 
 .recently-viewed-content .action-button {
     color: rgba(255, 255, 255, 0.9);
-}
+} */
 
 /* fixed navigation bar */
 .fixed-nav {
@@ -265,19 +373,20 @@ header {
     transition: opacity 0.2s ease;
 }
 
+
 .nav-item:hover {
     opacity: 0.8;
 }
 
 .notification-dot {
     position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 8px;
-    height: 8px;
-    /* background-color: rgb(249, 115, 22);
+    top: 15px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: #E69938;
     border-radius: 9999px;
-    border: 2px solid rgb(13 148 136);  */
+    border: 2px solid #286765; 
 }
 
 /* COMMENT COPY */
