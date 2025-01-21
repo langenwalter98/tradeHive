@@ -11,14 +11,18 @@
     <!-- jquery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- font awesome CDN-->
+    <script src="https://kit.fontawesome.com/dd56cfc9b9.js" crossorigin="anonymous"></script>
     <!-- typeface import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body class="min-h-screen">
     <!-- header section -->
     <header class="p-4 flex items-center gap-4 bg-teal-700 text-white">
         <!-- logo container -->
         <div class="w-12 h-12">
-            <img src="/api/placeholder/48/48" alt="LOGO HERE" class="w-full h-full object-cover rounded-lg"/>
+            <img src="/images/thLogo.png" alt="LOGO HERE" class="w-full h-full object-cover rounded-lg"/>
         </div>
         <!-- search bar container -->
         <div class="flex-1 relative flex items-center">
@@ -26,7 +30,7 @@
                 placeholder="Search here..." 
                 class="search-input"/>
             <button class="filter-button">
-                <svg class="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
                 </svg>
             </button>
@@ -42,22 +46,32 @@
             <!-- recommended card 01 -->
             <div class="recommendation-card">
                 <div class="relative">
+                    <!-- <div class="gradient-overlay"></div> -->
                     <img src="/images/lavaLamp.jpg" class="card-image"/>
                     <div class="user-badge">
-                        <!-- <img src="/api/placeholder/24/24" alt="User" class="w-6 h-6 rounded-full"/> -->
-                        <span class="text-sm">Jenny Joe</span>
+                        <img src="/images/jennyJoe.jpg" alt="Jenny Joe" class="w-8 h-8 rounded-full"/>
+                        <div class="flex flex-col">
+                            <span class="text-sm">Jenny Joe <i class="fa-solid fa-check"></i></span>
+                            <span class="text-xs">
+                                <span><i class="fa-solid fa-star fa-xs" style="color: white;"></i></span>
+                                <span><i class="fa-solid fa-star fa-xs" style="color: white;"></i></span>
+                                <span><i class="fa-solid fa-star fa-xs" style="color: white;"></i></span>
+                                <span><i class="fa-solid fa-star fa-xs" style="color: white;"></i></span>
+                                <span><i class="fa-solid fa-star-half fa-xs" style="color: white;"></i></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="card-content">
                     <h3 class="font-medium">Lava Lamp</h3>
-                    <div class="card-actions">
+                    <div class="flex gap-1 mt-1">
                         <button class="action-button">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </button>
                         <button class="action-button">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
                             </svg>
                         </button>
@@ -69,20 +83,28 @@
                 <div class="relative">
                     <img src="/images/campFood.jpg" class="card-image"/>
                     <div class="user-badge">
-                        <!-- <img src="/api/placeholder/24/24" alt="User" class="w-6 h-6 rounded-full"/> -->
-                        <span class="text-sm">Jack Jones</span>
+                        <img src="/images/jackJones.jpg" alt="Jack Jones" class="w-8 h-8 rounded-full"/>
+                        <div class="flex flex-col">
+                            <span class="text-sm">Jack Jones <i class="fa-solid fa-check"></i></span>
+                            <span class="text-xs">
+                                <span><i class="fa-solid fa-star fa-xs" style="color: white;"></i></span>
+                                <span><i class="fa-solid fa-star fa-xs" style="color: white;"></i></span>
+                                <span><i class="fa-solid fa-star fa-xs" style="color: white;"></i></span>
+                                <span><i class="fa-solid fa-star fa-xs" style="color: white;"></i></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="card-content">
                     <h3 class="font-medium">Camping Cooking Lesson</h3>
-                    <div class="card-actions">
+                    <div class="flex gap-1 mt-1">
                         <button class="action-button">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </button>
                         <button class="action-button">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
                             </svg>
                         </button>
@@ -103,8 +125,14 @@
                         <img src="/images/jennyJoe.jpg" alt="Jenny Joe" class="hexagon"/>
                     </div>
                 </div>
-                <h3 class="text-sm font-medium">Jenny Joe</h3>
-                <div class="text-xs">⭐⭐⭐⭐⭐</div>
+                <h3 class="text-sm font-medium">Jenny Joe <i class="fa-solid fa-check" style="color: #286765;"></i></h3>
+                <div class="text-xs">
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star-half fa-xs"></i></span>
+                </div>
             </div>
              <!-- trader card 02 -->
             <div class="trader-card">
@@ -113,8 +141,13 @@
                         <img src="/images/jackJones.jpg" alt="Jack Jones" class="hexagon"/>
                     </div>
                 </div>
-                <h3 class="text-sm font-medium">Jack Jones</h3>
-                <div class="text-xs">⭐⭐⭐⭐⭐</div>
+                <h3 class="text-sm font-medium">Jack Jones <i class="fa-solid fa-check" style="color: #286765;"></i></h3>
+                <div class="text-xs">
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                </div>
             </div>
             <!-- trader card 03 -->
             <div class="trader-card">
@@ -123,8 +156,14 @@
                         <img src="/images/piperWhite.jpg" alt="Piper White" class="hexagon"/>
                     </div>
                 </div>
-                <h3 class="text-sm font-medium">Piper White</h3>
-                <div class="text-xs">⭐⭐⭐⭐⭐</div>
+                <h3 class="text-sm font-medium">Piper White <i class="fa-solid fa-check" style="color: #286765;"></i></h3>
+                <div class="text-xs">
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                </div>
             </div>
             <!-- trader card 04 -->
             <div class="trader-card">
@@ -133,8 +172,13 @@
                         <img src="/images/sallySmith.jpg" alt="Sally Smith" class="hexagon"/>
                     </div>
                 </div>
-                <h3 class="text-sm font-medium">Sally Smith</h3>
-                <div class="text-xs">⭐⭐⭐⭐⭐</div>
+                <h3 class="text-sm font-medium">Sally Smith <i class="fa-solid fa-check" style="color: #286765;"></i></h3>
+                <div class="text-xs">
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                </div>
             </div>
             <!-- trader card 05 -->
             <div class="trader-card">
@@ -143,8 +187,14 @@
                         <img src="/images/timJim.jpg" alt="Tim Jim" class="hexagon"/>
                     </div>
                 </div>
-                <h3 class="text-sm font-medium">Tim Jim</h3>
-                <div class="text-xs">⭐⭐⭐⭐⭐</div>
+                <h3 class="text-sm font-medium">Tim Jim <i class="fa-solid fa-check" style="color: #286765;"></i></h3>
+                <div class="text-xs">
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                </div>
             </div>
             <!-- trader card 06 -->
             <div class="trader-card">
@@ -153,8 +203,14 @@
                         <img src="/images/marieMoe.jpg" alt="Marie Moe" class="hexagon"/>
                     </div>
                 </div>
-                <h3 class="text-sm font-medium">Marie Moe</h3>
-                <div class="text-xs">⭐⭐⭐⭐⭐</div>
+                <h3 class="text-sm font-medium">Marie Moe <i class="fa-solid fa-check" style="color: #286765;"></i></h3>
+                <div class="text-xs">
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star fa-xs"></i></span>
+                    <span><i class="fa-solid fa-star-half fa-xs"></i></span>
+                </div>
             </div>
         </div>
     </section>
